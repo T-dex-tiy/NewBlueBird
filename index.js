@@ -7,7 +7,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/api/form", (req, res) => {
-  console.log(req.body);
+  console.log(req.body.Res);
+  nodemailer.createTestAccount((err, account) => {
+    const htmlEmail = "";
+  });
 });
 
 const PORT = process.env.port || 3001;
