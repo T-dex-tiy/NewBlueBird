@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/api/form", (req, res) => {
-  console.log(req.body.Res, req.body.email);
+  console.log(req.body.Res, req.body.user);
   nodemailer.createTestAccount((err, account) => {
     const htmlEmail = "";
   });
