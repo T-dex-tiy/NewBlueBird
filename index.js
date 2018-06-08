@@ -30,7 +30,7 @@ app.post("/api/form", (req, res) => {
     <p>You are going to be flying with a party of ${
       req.body.Res.numberOfAttendees
     }</p>
-    <p>On ${req.body.Res.day}</p>
+    <p>On ${req.body.Res.day} at ${req.body.Res.pickupTime}</p>
   </table>`;
   console.log(req.body.Res, req.body.user);
   var data = {
