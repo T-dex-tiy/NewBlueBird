@@ -13,7 +13,8 @@ class ResPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: ""
+      date: "",
+      timePickUp: ""
     };
     this.newRes = this.newRes.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -24,9 +25,13 @@ class ResPage extends Component {
     this.setState({ date: newDate });
   }
 
-  getDate(event) {
-    console.log(this.new);
-  }
+  timechange = event => {
+    let newtime = "";
+    let newTimeDropDown = event.target.value;
+    newtime = newTimeDropDown;
+    console.log(newtime);
+    this.setState({ timePickUp: newtime });
+  };
 
   newRes(event) {
     var pickUpLocation = this.refs.hangarPickup.value;
@@ -154,13 +159,20 @@ class ResPage extends Component {
           </select>
         </div>
         <div className="selection">
-          <select className="dropdownStyle" ref="pickupTime">
+          <select
+            className="dropdownStyle"
+            onChange={this.timechange}
+            ref="pickupTime"
+          >
             <option disable="true" value="null" selected hidden>
               AM or PM
             </option>
             <option value="AM">AM</option>
             <option value="PM">PM</option>
           </select>
+        </div>
+        <div>
+          <select className="dropdownStyle" ref="timestamp" />
         </div>
         <Calendar
           style={style}

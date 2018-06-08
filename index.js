@@ -2,9 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
-const api_key = "xxx";
+const api_key = "";
 const domain = "sandbox5b0ca462d46e428f80aae64482cfcce0.mailgun.org";
 const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
+const path = require("path");
+const filepath = path.join(__dirname, "./mainlogo.png");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,7 +18,7 @@ app.post("/api/form", (req, res) => {
     <table style="width:100%; background-color:#D48C3C;border:1px solid black;padding:0;margin:0;height:10vh">
       <tr>
         <th align="right">
-          <a href="https://cloudveilmountainheli.com/"><img src="./img/mainlogo.png" style="height:15vh;z-index:100;"/></a>
+          <h1>Bluebird Heli</h1><a href="https://cloudveilmountainheli.com/"><img src="cid:mainlogo.png" style="height:15vh;z-index:100;"/></a>
         </th>
       </tr>
   </table>
@@ -35,7 +37,8 @@ app.post("/api/form", (req, res) => {
     from: "dex.mills@dexmills.com",
     to: email,
     subject: "Hello",
-    html: htmlEmail
+    html: htmlEmail,
+    inline: filepath
   };
 
   mailgun.messages().send(data, function(error, body) {
