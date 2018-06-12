@@ -54,7 +54,7 @@ class App extends Component {
       this.userScreen({ newLandingPage: page });
     });
   }
-
+  
   renderLogin(logInfo) {
     const email = logInfo.email;
     const pass = logInfo.pass;
