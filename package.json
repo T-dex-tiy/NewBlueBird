@@ -7,10 +7,10 @@
     "node":"10.4.1"
   },
   "scripts": {
-    "start": "node index.js",
+    "dev": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix cloudveil_heli_app",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
