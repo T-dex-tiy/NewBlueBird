@@ -9,32 +9,6 @@ const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
 const path = require("path");
 const filepath = path.join(__dirname, "./mainlogo.png");
 
-let serviceAccount = require('path/to/serviceAccountKey.json');
-const dB= admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://bluebirdheli-dd1f5.firebaseio.com",
-});
-console.log(dB);
-
-const config={
-  apiKey: "AIzaSyAM0DL6QzhVONFmxP5OHWGi9Vj4lS2RbbM",
-  authDomain: "bluebirdheli-dd1f5.firebaseapp.com",
-  databaseURL: "https://bluebirdheli-dd1f5.firebaseio.com",
-  storageBucket: "bluebirdheli-dd1f5.appspot.com",
-}
-firebase.initializeApp(config)
-
-const auth=firebase.database()
-
-
-
-const firebasekey=firebase.database().ref('/')
-firebasekey.once("value").then(snapshot=>{console.log(snapshot);
-})
-
-
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
