@@ -7,7 +7,8 @@
     "node": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix cloudveil_heli_app",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
