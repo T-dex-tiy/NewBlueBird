@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "npm start build "
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
