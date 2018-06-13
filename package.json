@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "node index.js",
     "server": "nodemon index.js",
-    "client": "npm run start --prefix cloudveil_heli_app",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
