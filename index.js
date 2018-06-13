@@ -19,7 +19,6 @@ const admin= require('firebase-admin');
 const api_key = "key-95dac8c46e0b581f97f2cff10a584997";
 const domain = "sandbox5b0ca462d46e428f80aae64482cfcce0.mailgun.org";
 const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
-const path = require("path");
 const filepath = path.join(__dirname, "./mainlogo.png");
 
 
