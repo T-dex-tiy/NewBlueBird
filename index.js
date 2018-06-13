@@ -11,6 +11,7 @@
 })();
 
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
@@ -21,8 +22,10 @@ const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
 const path = require("path");
 const filepath = path.join(__dirname, "./mainlogo.png");
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "client", "build",)))
 
 app.post("/api/form", (req, res) => {
   const email = req.body.user;
@@ -59,6 +62,8 @@ app.post("/api/form", (req, res) => {
     console.log(body);
   });
 });
+app.get('*'(req, res)=>{res.sendFile(path.join(__dirname,"client","build","index.html"))
+})
 
 const PORT = process.env.port || 3001;
 
