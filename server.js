@@ -52,8 +52,21 @@ app.post("/api/form", (req, res) => {
     console.log(body);
   });
 });
-app.get((req, res)=>{res.sendFile(path.join(__dirname,"client","src"))
+const dirName=__dirname;
+
+
+console.log(dirName);
+
+const figuringOut = app.get('/', (req, res)=>{
+  if(res){ 
+    console.log("res");
+    return res.sendFile(path.join(__dirname,"client"))
+  }else{
+    console.log("req");
+  }
 })
+console.log(figuringOut);
+
 
 const PORT = process.env.PORT || 3001;
 
