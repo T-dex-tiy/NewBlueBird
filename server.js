@@ -15,7 +15,7 @@ const filepath = path.join(__dirname, "./mainlogo.png");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client/build")))
-app.use(morgan('dev'))
+app.use(logger('dev'))
 
 app.post("/api/form", (req, res) => {
   const email = req.body.user;
