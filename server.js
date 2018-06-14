@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
 const admin= require('firebase-admin');
+const logger =require('morgan')
 const api_key = "key-95dac8c46e0b581f97f2cff10a584997";
 const domain = "sandbox5b0ca462d46e428f80aae64482cfcce0.mailgun.org";
 const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
@@ -14,6 +15,7 @@ const filepath = path.join(__dirname, "./mainlogo.png");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client/build")))
+app.use(morgan('dev'))
 
 app.post("/api/form", (req, res) => {
   const email = req.body.user;
