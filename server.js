@@ -52,9 +52,7 @@ app.post("/api/form", (req, res) => {
     console.log(body);
   });
 });
-app.get('*', (req, res)=>{
-  console.log("Is this where the issue lies"?)
-  return res.sendFile(path.join(__dirname,"/client/build"))
+app.get('*', (req, res)=>{res.sendFile(path.join(__dirname,"/client/build"))
 })
 
 const PORT = process.env.PORT || 3001;
