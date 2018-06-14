@@ -57,7 +57,7 @@ const dirName=__dirname;
 
 console.log(dirName);
 
-const figuringOut = app.get('/', (req, res)=>{
+app.get('/', (req, res)=>{
   if(res){ 
     console.log("res");
     return res.sendFile(path.join(__dirname,"client"))
@@ -65,7 +65,7 @@ const figuringOut = app.get('/', (req, res)=>{
     console.log("req");
   }
 })
-console.log(figuringOut);
+
 
 
 const PORT = process.env.PORT || 3001;
