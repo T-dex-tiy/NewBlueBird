@@ -5,15 +5,14 @@
   "main": "index.js",
   "engines": {
     "node": "10.4.1",
-    "npm":"6.1.0"
-
+    "npm": "6.1.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "dev": "node server.js",
     "server": "nodemon server.js",
     "production": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run production\"",
-    "heroku-postbuild": "cd clientFolder && npm install && npm run build"
+    "start": "concurrently \"npm run server\" \"npm run production\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
