@@ -11,9 +11,16 @@ class Header extends Component {
   render() {
     const madeReservations = Object.keys(this.props.reservations).map(
       key => this.props.reservations[key]
-    );
-    const updatedReservations = madeReservations.map(key => [key]);
-
+    ).map(key=>{
+      console.log(key.reservationOne,key.reservationTwo)
+      return key.reservationOne || key.reservationTwo
+    }
+    )
+    // const updatedReservations = madeReservations.map(key =>madeReservations[key]).map(key=>console.log(key)
+    // )
+   
+    console.log(madeReservations);
+    
     return (
       <div className="header font">
         <LogIn
