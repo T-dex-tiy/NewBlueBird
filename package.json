@@ -1,0 +1,29 @@
+{
+  "name": "bluebirdheliapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "10.4.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.12.1",
+    "mailgun-js": "^0.18.0",
+    "mandrill-api": "^1.0.45",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.6.5",
+    "nodemon": "^1.17.5"
+  }
+}
