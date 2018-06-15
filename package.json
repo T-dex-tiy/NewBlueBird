@@ -10,9 +10,9 @@
   "scripts": {
     "dev": "node server.js",
     "server": "nodemon server.js",
-    "production": "npm run start --prefix client",
+    "production": "npm run build --prefix client",
     "start": "concurrently \"npm run server\" \"npm run production\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "npm run start"
   },
   "author": "",
   "license": "ISC",
