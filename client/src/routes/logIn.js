@@ -35,10 +35,10 @@ class logIn extends Component {
   }
 
   render() {
-    const nextTrip=this.props.lastReservation.length
-    console.log(typeof(nextTrip));
-    const nextTripDisplay=this.props.lastReservation[0]
-    console.log(typeof(nextTripDisplay));
+    // const nextTrip=this.props.lastReservation.length
+    // console.log(typeof(nextTrip));
+    // const nextTripDisplay=this.props.lastReservation[0]
+    // console.log(typeof(nextTripDisplay));
     
     if (this.props.user === null) {
       return (
