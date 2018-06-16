@@ -35,6 +35,11 @@ class logIn extends Component {
   }
 
   render() {
+    const nextTrip=this.props.lastReservation.length
+    console.log(typeof(nextTrip));
+    const nextTripDisplay=Object.keys(this.props.lastReservation)
+    console.log(typeof(nextTripDisplay));
+    
     if (this.props.user === null) {
       return (
         <div>
