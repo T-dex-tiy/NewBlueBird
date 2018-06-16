@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import Rebase from "re-base";
-import firebase, { auth } from "./firebase/firebase";
-import LogIn from "./routes/logIn";
-import "./styles/app.css";
-import { EventEmitter } from "events";
-import ResPage from "./calendar/datePicker";
+import React, { Component } from 'react';
+import Rebase from 're-base';
+import firebase, { auth } from './firebase/firebase';
+import './styles/app.css';
+import { EventEmitter } from 'events';
+import ResPage from './calendar/datePicker';
 import Header from "./header";
 import Pics from "./customerPics/pictures";
 import NavBar from "./navComponents";
