@@ -14,7 +14,7 @@ const filepath = path.join(__dirname, "./mainlogo.png");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname,"client")))
+app.use(express.static(path.join(__dirname, "client","build","index.html")))
 app.use(logger('dev'));
 
 app.post("/api/form", (req, res) => {
@@ -58,7 +58,7 @@ const dirName=__dirname;
 console.log(dirName);
 
 app.get('/', (req, res)=>{
-   res.sendFile(path.join(__dirname, "client"))
+   res.sendFile(path.join(__dirname, "client", "build","index.html"))
   }
 )
 
