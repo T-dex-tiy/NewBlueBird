@@ -58,7 +58,7 @@ const dirName=__dirname;
 console.log(dirName);
 
 app.get('/', (req, res)=>{
-   res.sendFile(path.join(__dirname, "client", "build"))
+   res.sendFile(path.join(__dirname, "client"))
   }
 )
 
