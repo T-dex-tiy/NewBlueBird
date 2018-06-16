@@ -19,7 +19,7 @@ class Header extends Component {
     // const updatedReservations = madeReservations.map(key =>madeReservations[key]).map(key=>console.log(key)
     // )
    
-    console.log(madeReservations);
+    console.log(madeReservations, "Is this conntect to react?");
     
     return (
       <div className="header font">
