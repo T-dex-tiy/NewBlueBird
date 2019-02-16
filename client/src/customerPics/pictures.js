@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PicDisplay from './picturedisplay';
 
 class Pics extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     console.log(this.props.picture);

@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import PicBox from "./pictureBox";
 
 class PicDisplay extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
 
   render() {
     const picsDis = Object.keys(this.props.src).map(key => this.props.src[key]);
