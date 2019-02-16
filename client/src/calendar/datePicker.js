@@ -77,64 +77,7 @@ class ResPage extends Component {
 
   render() {
     let timePickUpDropDown;
-  //   let morningvar=(<option className="dropdownStyle" value="6:30 AM">
-  //   6:30 AM
-  // </option>
-  // <option className="dropdownStyle" value="6:45 AM">
-  //   6:45 AM
-  // </option>
-  // <option className="dropdownStyle" value="7:00 AM">
-  //   7:00 AM
-  // </option>
-  // <option className="dropdownStyle" value="7:15 AM">
-  //   7:15 AM
-  // </option>
-  // <option className="dropdownStyle" value="7:30 AM">
-  //   7:30 AM
-  // </option>
-  // <option className="dropdownStyle" value="7:45 AM">
-  //   7:45 AM
-  // </option>
-  // <option className="dropdownStyle" value="8:00 AM">
-  //   8:00 AM
-  // </option>
-  // <option className="dropdownStyle" value="8:15 AM">
-  //   8:15 AM
-  // </option>
-  // <option className="dropdownStyle" value="8:30 AM">
-  //   8:30 AM
-  // </option>
-  // <option className="dropdownStyle" value="8:45 AM">
-  //   8:45 AM
-  // </option>
-  // <option className="dropdownStyle" value="9:00 AM">
-  //   9:00 AM
-  // </option>
-  // <option className="dropdownStyle" value="9:15 AM">
-  //   9:15 AM
-  // </option>
-  // <option className="dropdownStyle" value="9:30 AM">
-  //   9:30 AM
-  // </option>
-  // <option className="dropdownStyle" value="9:40 AM">
-  //   9:40 AM
-  // </option>
-  // <option className="dropdownStyle" value="10:00 AM">
-  //   10:00 AM
-  // </option>
-  // <option className="dropdownStyle" value="10:15 AM">
-  //   10:15 AM
-  // </option>
-  // <option className="dropdownStyle" value="10:30 AM">
-  //   10:30 AM
-  // </option>
-  // <option className="dropdownStyle" value="10:45 AM">
-  //   10:45 AM
-  // </option>
-  // <option className="dropdownStyle" value="11:00 AM">
-  //   11:00 AM
-  // </option>
-  // );
+  
     let eveningvar=(<select className="dropdownStyle" ref="exactTimePickUp">
     <option
       className="dropdownStyle"
